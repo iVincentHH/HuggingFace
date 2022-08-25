@@ -77,9 +77,6 @@ jobs:
         run: |
           ls -l /github/home/
           ls -l /github/home/.cache/
-          ls -l /github/home/.cache/torch_extensions/
-          ls -l /github/home/.cache/torch_extensions/py38_cu113/
-          ls -l /github/home/.cache/torch_extensions/py38_cu113/fused_adam/fused_adam.so
 
       # To avoid unknown test failures
       - name: Pre build DeepSpeed *again*
