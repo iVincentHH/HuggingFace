@@ -105,7 +105,7 @@ jobs:
         run: |
           python -m pytest -v --make-reports=tests_torch_cuda_extensions_gpu tests/deepspeed/test_deepspeed.py -k "TrainerIntegrationDeepSpeed and test_hf_scheduler_ds_optimizer"
 
-      - name: Check cache dir 4
+      - name: Check cache dir 4 again
         working-directory: /workspace/transformers
         run: |
           ls -l /github/home/
