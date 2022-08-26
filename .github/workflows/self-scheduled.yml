@@ -103,7 +103,7 @@ jobs:
       - name: Run all tests on GPU
         working-directory: /workspace/transformers
         run: |
-          python -m pytest -v --make-reports=tests_torch_cuda_extensions_gpu tests/deepspeed/test_deepspeed.py -k "TrainerIntegrationDeepSpeed and test_hf_scheduler_ds_optimizer"
+          python -m pytest -v --make-reports=${{ matrix.machine_type }}_tests_torch_cuda_extensions_gpu tests/deepspeed tests/extended
 
       - name: Check cache dir 4 again
         working-directory: /workspace/transformers
